@@ -1,0 +1,241 @@
+<html>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+      <div class="mermaid">
+    
+        classDiagram
+          class Assets {
+            images : dict
+            sounds : dict
+          }
+          class Background {
+            background_image
+            background_sound
+            display
+            sound_on : bool
+            draw()
+            init_background_image()
+            init_background_sound()
+            play_sound()
+            stop_sound()
+            toggle_sound()
+          }
+          class Controller {
+            app_state : str
+            background
+            clock
+            display
+            game
+            gameover_screen
+            welcome_screen
+            check_and_quit_app_if_needed(event)
+            end_game()
+            exit_app()
+            game_event_loop()
+            game_over_event_loop()
+            game_over_redraw()
+            game_over_update_data()
+            game_redraw()
+            game_update_data()
+            gameloop()
+            gameoverloop()
+            handle_gameover_event(event)
+            handle_global_event(event)
+            handle_global_keyboard_event(event)
+            handle_welcome_screen_event(event)
+            init_pygame() Display
+            is_game_on_state() bool
+            is_game_over_screen_state() bool
+            is_welcome_screen_state() bool
+            mainloop()
+            menuloop()
+            set_gameon_state()
+            set_gameover_state()
+            set_wecome_screen_state()
+            start_game()
+            welcome_event_loop()
+            welcome_redraw_screen()
+            welcome_update_data()
+          }
+          class Display {
+            height : int
+            lane_width : float
+            num_of_lanes : int
+            surface
+            width : int
+            fix_missing_display_error()
+            setup_display_surface()
+          }
+          class FallingObject {
+            calc_object_height
+            just_hit : bool
+            lane : int
+            log_depth : int
+            num_of_lanes : int
+            score_value : int
+            speed : int
+            state : str
+            type : str
+            use_random_lane : bool
+            bottom() float
+            calc_object_height() float
+            drop(speed_factor: float)
+            get_image_name() str
+            get_random_lane() int
+            if_needed_set_random_lane()
+            is_bomb() bool
+            is_just_hit() bool
+            is_life() bool
+            is_state_active() bool
+            is_state_evaded() bool
+            is_state_target_hit() bool
+            reset()
+            reset_just_hit()
+            set_random_speed()
+            set_score_value(speed: float)
+            set_state_active()
+            set_state_evaded()
+            set_state_target_hit()
+          }
+          class Game {
+            game_controller
+            game_model
+            game_screen
+            draw()
+            hangle_event(events)
+            is_over() bool
+            start()
+            update_data()
+          }
+          class GameController {
+            game_model
+            handle_game_events(event)
+          }
+          class GameModel {
+            character
+            falling_objects : FallingObject[0], list
+            game_speed_factor : int, float
+            is_over : bool
+            max_score : int
+            num_of_lanes : int
+            score : int, float
+            storage
+            add_bomb_objects()
+            add_life_objects()
+            check_for_collisions()
+            check_for_falling_objects_evaded()
+            create_falling_object(type: str, i_lane: int, use_random_lane: bool) FallingObject
+            drop_falling_objects()
+            end_game()
+            get_max_score() int
+            get_score() int
+            grab_max_score()
+            increase_score(score_delta: int)
+            increase_speed()
+            init_character()
+            init_falling_objects()
+            is_evaded(obj: FallingObject) bool
+            is_hit(obj: FallingObject) bool
+            load_max_score()
+            move_character_left()
+            move_character_right()
+            reset_max_score()
+            reset_score_etc()
+            set_max_score(new_max_score: int)
+            start_game()
+            update_data()
+          }
+          class GameScreen {
+            bomb_image
+            character_image
+            display
+            game_model
+            helper
+            hit_sound
+            life_image
+            scoreboard
+            win_sound
+            draw()
+            draw_character()
+            draw_falling_object(obj: FallingObject)
+            draw_falling_objects()
+            draw_object_exploded(obj: FallingObject)
+            draw_object_unexploted(obj: FallingObject)
+            draw_object_value(obj: FallingObject)
+            draw_scoreboard()
+            get_obj_screen_pos(obj: FallingObject)
+            init_character_image()
+            init_hit_sound()
+            init_life_image()
+            init_obj_image()
+            init_win_sound()
+          }
+          class GameoverScreen {
+            display
+            display_game_over()
+            draw()
+          }
+          class Helper {
+            print(text: str, size: int, center)
+          }
+          class Image {
+            height
+            image
+            image_name : str
+            rect
+            width
+            draw(surface, x, y)
+          }
+          class Logger {
+            is_debug : bool
+            log() None
+          }
+          class MainCharacter {
+            height : int
+            image : str
+            lane
+            lives : int
+            num_of_lanes : int
+            top : int
+            visible : bool
+            add_life()
+            is_dead() bool
+            loose_life()
+            move_left()
+            move_right()
+          }
+          class Scoreboard {
+            display
+            game_model
+            health_image
+            draw()
+            draw_health()
+            draw_max_score()
+            draw_score()
+            init_health_image()
+          }
+          class Sound {
+            file_name : str
+            sound
+            beep()
+            play()
+            stop()
+          }
+          class Storage {
+            file_name : str
+            load(name: str)
+            save(name: str, value)
+          }
+          class WelcomeScreen {
+            display
+            welcome_image
+            display_instructions()
+            draw()
+            draw_game_title()
+            draw_welcome_character()
+            init_welcome_charater_image()
+          }
+  
+       </div>
+  </body>
+</html>
