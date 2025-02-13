@@ -1,5 +1,5 @@
 import random
-from src.storage import Storage
+# from src.storage import Storage
 from src.falling_object import FallingObject
 from src.character import MainCharacter
 
@@ -18,7 +18,7 @@ class GameModel:
         constructor
         num_of_lanes: (int) number of lanes in the game. Used to calculate object sizes and positions.
         '''
-        self.storage: Storage = Storage(GAME_STORAGE_FILE_NAME)
+        # self.storage: Storage = Storage(GAME_STORAGE_FILE_NAME)
         self.load_max_score()
         self.num_of_lanes: int = num_of_lanes
         self.score: float = 0
@@ -194,7 +194,7 @@ class GameModel:
         '''
         Loads the maximum score from the storage file
         '''
-        self.max_score = self.storage.load(MAX_SCORE_LABEL)
+        self.max_score = 10000 #self.storage.load(MAX_SCORE_LABEL)
 
     def get_max_score(self) -> int:
         '''
@@ -215,7 +215,7 @@ class GameModel:
         Forces the max score to zero. Used maily for testing.
         '''
         self.max_score = 0
-        self.storage.save(MAX_SCORE_LABEL, self.max_score)
+        # self.storage.save(MAX_SCORE_LABEL, self.max_score)
 
     def get_score(self) -> int:
         '''

@@ -1,4 +1,5 @@
 import shelve
+import dbm
 
 
 class Storage:
@@ -19,9 +20,8 @@ class Storage:
         name: (str) name of the data to store
         value: (Any) value to store
         '''
-        store = shelve.open(self.file_name)
-        store[name] = value
-        store.close()
+        with shelve.open(self.file_name, flag='c') as store:
+            store[name] = value
 
     def load(self, name: str):
         '''
@@ -29,17 +29,10 @@ class Storage:
         name: (str) name of the data to store
         return: (Any) value retrieved from the file
         '''
-
-        # First time we read we fail because the file is not there. Create it to get things going.
-        error = False
-        value = 0
-        store = shelve.open(self.file_name)
         try:
-            value = store[name]
-        except Exception as err:
-            print(f"Unexpected {err=}, {type(err)=}")
-            error = True
-        store.close()
-        if error:
-            self.save(name, value)
-        return value
+            with shelve.open(self.file_name, flag='r') as store:
+                return store.get(name, 0)
+        except dbm.error:
+            # Handle the case where the dbm module is not available or the file cannot be opened in read mode
+            with shelve.open(self.file_name, flag='c') as store:
+                return store.get(name, 0)
