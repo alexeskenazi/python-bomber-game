@@ -26,8 +26,9 @@
 
 ### Steps
 1. Clone the Repository
-2. Install Dependencies: Use Poetry to install the required dependencies:
-3. Run the Game: Activate the virtual environment and run the game:
+2. Install pygame if you have not already: pip install pygame
+3. Install Dependencies: poetry install
+4. Run the Game: python main.py
 
 ### Additional Information
 
