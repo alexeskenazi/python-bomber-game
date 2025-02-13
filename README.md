@@ -3,7 +3,7 @@
 *Links to resources:*
 
 * [Link to Replit](https://replit.com/join/lpjkntmecg-alexeskenazi)
-* [link to demo presentation slides](https://github.com/alexeskenazi/python-bomber-game/Presentation.pdf)
+* [Link to demo presentation slides](https://github.com/alexeskenazi/python-bomber-game/blob/main/Presentation.pdf)
 
 ### Team: Alex and Vishil
 #### Team Members
