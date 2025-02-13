@@ -260,7 +260,7 @@ The Project is broken down into the following file structure:
 | 47   | Game Over screen - no action needed                                    | Game over text and key instructions are displayed                                                      |
 | 48   | Game Over - Press Space                                                | Restarts the game - Max score is updated accordingly                                                    |
 | 49   | Game Over - Press Q                                                    | Application exits                                                                                      |
-| 50   | Game Over screen - Press S when music is off                           | Music starts (note - music does not work on Replit, only on local)                                      |
-| 51   | Game Over screen - Press S when music is on                            | Music stops (note - music does not work on Replit, only on local)                                       |
-| 52   | Game Over screen - Press R                                             | The max score is reset to zero the next time the game is started                                       |
-| 53   | Close the game, delete the file mario_storage.txt, play the game again | The game should run without problems and a new mario_storage.txt file should be created              |
+| 50   | Game Over screen - Press S when music is off                           | Music starts (note - music does not work on Replit, only on local                                      |
+| 51   | Game Over screen - Press S when music is on                            | Music stops (note - music does not work on Replit, only on local                                       |
+| 52   | Game Over scren - Press R                                              | The max score is reset to zero the next time the game is started                                       |
+| 53   | Close the game,delete the file mario\_storage.txt, play the game again | The game should run without problems and a new mario\_storage.txt files should be created              |
