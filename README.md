@@ -1,20 +1,13 @@
-# CS110 Final Project Proposal
 # Mario Bomber
-## CS 110 Final Project
-### Fall 2022
-### [Assignment Description](https://docs.google.com/document/d/1H4R6yLL7som1lglyXWZ04RvTp_RvRFCCBn6sqv-82ps/edit?usp=sharing)
 
 *Links to resources:*
 
 * [Link to Replit](https://replit.com/join/lpjkntmecg-alexeskenazi)
-
-* [Link to Github](https://github.com/bucs110FALL22/final-project-alex-and-vishil)
-* [link to demo presentation slides](https://docs.google.com/presentation/d/1hdOnsbMrEI_zL2kYNDxttRJsh1tChDJkDEUE86m8mDA/edit?usp=sharing)
+* [link to demo presentation slides](https://github.com/alexeskenazi/python-bomber-game/Presentation.pdf)
 
 ### Team: Alex and Vishil
 #### Team Members
- * Alex Eskenazi
- 
+ * [Alex Eskenazi ](https://www.linkedin.com/in/alex-eskenazi/)
  * Vishil Patel
 
 
